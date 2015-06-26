@@ -14,8 +14,5 @@
     "morgan": "~1.5.3",
     "serve-favicon": "~2.2.1",
     "cloudinary": ""
-  },
-  "engines": {
-    "node": "0.6.x"
   }
 }
