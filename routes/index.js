@@ -6,7 +6,7 @@ cloudinary.uploader.upload("MongoDB.jpg",
 function(result) { console.log(result) })
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express Heroku!!' });
+  res.render('index', { title: 'Express in Heroku!!' });
 });
 
 module.exports = router;
