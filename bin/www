@@ -12,9 +12,9 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '9002');
 app.set('port', port);
-
+console.log(port);
 /**
  * Create HTTP server.
  */
@@ -55,6 +55,7 @@ function normalizePort(val) {
 
 function onError(error) {
   if (error.syscall !== 'listen') {
+    console.log(error);
     throw error;
   }
 
@@ -86,5 +87,6 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  console.log('Listening on ' + bind);
+  
 }

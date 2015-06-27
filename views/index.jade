@@ -1,6 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to the Image
-  img#SomeImageID(src = imageURL)
+  p Welcome to #{title}
+
+  form(action="/", method="post", enctype="multipart/form-data")
+    input(type="file", name="image")
+    input(type="submit", value="Upload Image")
+
+  - if (images && images.length)
+    - images.forEach(function(image){
+      img(src=image.url)
+    - })
